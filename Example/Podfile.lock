@@ -1,0 +1,20 @@
+PODS:
+  - EnhanceKit (0.1.0):
+    - EnhanceKit/OC (= 0.1.0)
+    - EnhanceKit/Swift (= 0.1.0)
+  - EnhanceKit/OC (0.1.0)
+  - EnhanceKit/Swift (0.1.0)
+
+DEPENDENCIES:
+  - EnhanceKit (from `../`)
+
+EXTERNAL SOURCES:
+  EnhanceKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  EnhanceKit: 37c3290e26f8b38a2a4fca633e84853a8aeb6d09
+
+PODFILE CHECKSUM: 821070bab04f6ae2a9ef8a598d3359b1c690dd1a
+
+COCOAPODS: 1.11.2

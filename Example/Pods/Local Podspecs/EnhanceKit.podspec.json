@@ -1,0 +1,31 @@
+{
+  "name": "EnhanceKit",
+  "version": "0.1.0",
+  "summary": "用于增强系统框架的能力，主要是提供一些Extension的支持，并且不与任何业务发生关联",
+  "description": "包含OC和Swift部分，以subspec的方式隔离，可以分发饮使用",
+  "homepage": "https://github.com/lixinxing/EnhanceKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "lixinxing": "x@devlxx.com"
+  },
+  "source": {
+    "git": "https://github.com/lixinxing/EnhanceKit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "12.0"
+  },
+  "subspecs": [
+    {
+      "name": "Swift",
+      "source_files": "EnhanceKit/Classes/Swift/**/*"
+    },
+    {
+      "name": "OC",
+      "source_files": "EnhanceKit/Classes/OC/**/*"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+framework module EnhanceKit {
+  umbrella header "EnhanceKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
