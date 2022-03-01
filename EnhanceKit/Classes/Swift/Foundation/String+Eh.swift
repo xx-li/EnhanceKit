@@ -10,7 +10,7 @@ import Foundation
 
 extension String: EnhanceCompatible { }
 
-// MARK: - 正则表达式验证相关
+// MARK: - 字符串截取子串
 
 public extension EnhanceWrapper where Base == String {
     

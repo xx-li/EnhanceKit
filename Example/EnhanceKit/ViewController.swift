@@ -22,6 +22,13 @@ class ViewController: UIViewController {
         let data2 = (data as NSData).aesEncrypt(withKey: secKey.data(using: String.Encoding.utf8.rawValue)!, iv: nil)!
         let str2 = (data2 as NSData).aesDecryptWithkey(secKey.data(using: String.Encoding.utf8.rawValue)!, iv: nil)
         print(NSString.init(data: str2!, encoding: String.Encoding.utf8.rawValue)!)
+        
+        view.backgroundColor = UIColor.eh.hexColor("#FFD8D8D822")
+        
+        
+        print("\(Date.init().eh.format("HH:mm"))")
+        print("\(Date.init().eh.weekday())")
+        
     }
 
     override func didReceiveMemoryWarning() {
