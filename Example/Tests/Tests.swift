@@ -14,9 +14,22 @@ class Tests: XCTestCase {
     }
     
     func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+        
+        
     }
+    
+    func testDataEncryptAndDecrypt() {
+        let str:NSString = "abcdefg"
+        let data = str.data(using:  String.Encoding.utf8.rawValue)! as NSData
+        // 32位
+        let secKey: NSString = "cCaCAbACtQDUsbc6AgMnAAcCBEquaek5"
+        let encryptData = data.aesEncrypt(withKey: secKey.data(using: String.Encoding.utf8.rawValue)!, iv: nil)!
+        let decryptData = (encryptData as NSData).aesDecryptWithkey(secKey.data(using: String.Encoding.utf8.rawValue)!, iv: nil)
+        let result: NSString = NSString.init(data: decryptData!, encoding: String.Encoding.utf8.rawValue)!
+        
+        XCTAssert(str == result, "Pass")
+    }
+    
     
     func testPerformanceExample() {
         // This is an example of a performance test case.

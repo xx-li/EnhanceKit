@@ -9,26 +9,26 @@
 import UIKit
 import EnhanceKit
 
+class TestTableViewCell: UITableViewCell, EHReusable {
+    
+}
+
+class TestHeaderView: UITableViewHeaderFooterView, EHReusable {
+}
+
+
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let str:NSString = "abcdefg"
-        let data = str.data(using:  String.Encoding.utf8.rawValue)!
-        
-        let secKey: NSString = "cCaCAbACtQDUsbc6AgMnAAcCBEquaek5"
-        let data2 = (data as NSData).aesEncrypt(withKey: secKey.data(using: String.Encoding.utf8.rawValue)!, iv: nil)!
-        let str2 = (data2 as NSData).aesDecryptWithkey(secKey.data(using: String.Encoding.utf8.rawValue)!, iv: nil)
-        print(NSString.init(data: str2!, encoding: String.Encoding.utf8.rawValue)!)
-        
-        view.backgroundColor = UIColor.eh.hexColor("#FFD8D8D822")
-        
-        
-        print("\(Date.init().eh.format("HH:mm"))")
-        print("\(Date.init().eh.weekday())")
-        
+        tableView.eh.register(cell: TestTableViewCell.self)
+        tableView.eh.register(cell: TestNibTableViewCell.self, isCreateByNib: true)
+        tableView.eh.register(headerFooterView: TestHeaderView.self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,4 +37,33 @@ class ViewController: UIViewController {
     }
 
 }
+
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 200
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView: TestHeaderView = tableView.eh.dequeueReusableHeaderFooterView()
+        return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.row % 2 == 0 {
+            let cell: TestTableViewCell = tableView.eh.dequeueReusableCell(for: indexPath)
+            return cell
+        } else {
+            let cell: TestNibTableViewCell = tableView.eh.dequeueReusableCell(for: indexPath)
+            return cell
+        }
+    }
+    
+    
+}
+
+
 

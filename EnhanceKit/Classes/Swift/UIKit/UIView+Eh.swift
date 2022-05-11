@@ -7,7 +7,7 @@
 
 import Foundation
 
-public extension EnhanceWrapper where Base == UIView {
+public extension EnhanceWrapper where Base: UIView {
     
     /// 在当前视图所在视图树，找到离此视图最近的父视图（符合传入类型即可）
     /// - Parameters:

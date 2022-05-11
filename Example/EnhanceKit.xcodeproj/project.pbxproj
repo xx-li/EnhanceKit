@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		112854F1282B4A12006A3182 /* NSDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 112854F0282B4A12006A3182 /* NSDataTests.m */; };
+		112854F4282B5540006A3182 /* TestNibTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112854F2282B5540006A3182 /* TestNibTableViewCell.swift */; };
+		112854F5282B5540006A3182 /* TestNibTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 112854F3282B5540006A3182 /* TestNibTableViewCell.xib */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -29,6 +32,10 @@
 
 /* Begin PBXFileReference section */
 		0E160D0D48FE36E40E665D06 /* Pods-EnhanceKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnhanceKit_Example.release.xcconfig"; path = "Target Support Files/Pods-EnhanceKit_Example/Pods-EnhanceKit_Example.release.xcconfig"; sourceTree = "<group>"; };
+		112854EF282B4A12006A3182 /* EnhanceKit_Tests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EnhanceKit_Tests-Bridging-Header.h"; sourceTree = "<group>"; };
+		112854F0282B4A12006A3182 /* NSDataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSDataTests.m; sourceTree = "<group>"; };
+		112854F2282B5540006A3182 /* TestNibTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNibTableViewCell.swift; sourceTree = "<group>"; };
+		112854F3282B5540006A3182 /* TestNibTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestNibTableViewCell.xib; sourceTree = "<group>"; };
 		1130AD60278E6DA400C8B388 /* EnhanceKit_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EnhanceKit_Example-Bridging-Header.h"; sourceTree = "<group>"; };
 		1CF4100D3A9AFF42D4EE1E79 /* Pods_EnhanceKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EnhanceKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		295DF3F094D1A35505013F12 /* Pods-EnhanceKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnhanceKit_Tests.release.xcconfig"; path = "Target Support Files/Pods-EnhanceKit_Tests/Pods-EnhanceKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -96,6 +103,8 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				112854F2282B5540006A3182 /* TestNibTableViewCell.swift */,
+				112854F3282B5540006A3182 /* TestNibTableViewCell.xib */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -118,7 +127,9 @@
 			isa = PBXGroup;
 			children = (
 				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				112854F0282B4A12006A3182 /* NSDataTests.m */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
+				112854EF282B4A12006A3182 /* EnhanceKit_Tests-Bridging-Header.h */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -218,7 +229,7 @@
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 1320;
+						LastSwiftMigration = 1330;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -249,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				112854F5282B5540006A3182 /* TestNibTableViewCell.xib in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
@@ -335,6 +347,7 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				112854F4282B5540006A3182 /* TestNibTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +355,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				112854F1282B4A12006A3182 /* NSDataTests.m in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -522,6 +536,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DF35D2CB8797E86CA4BBAC2A /* Pods-EnhanceKit_Tests.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -534,6 +549,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tests/EnhanceKit_Tests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EnhanceKit_Example.app/EnhanceKit_Example";
@@ -544,6 +561,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 295DF3F094D1A35505013F12 /* Pods-EnhanceKit_Tests.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -552,6 +570,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tests/EnhanceKit_Tests-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EnhanceKit_Example.app/EnhanceKit_Example";
